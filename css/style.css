@@ -1,0 +1,64 @@
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+header, .nav_links, .pricing, .gallery{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#logo{
+  width: 100%;
+  height: auto;
+  animation: fadeIn;
+  animation-duration: 3s;
+}
+
+@keyframes fadeIn{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  #logo{
+    animation: none;
+  }
+}
+
+.nav_links{
+  flex-direction: column;
+}
+
+.card{
+  width: 100%;
+}
+
+.gallery img{
+  width: 100%;
+}
+
+@media all and (min-width: 700px) {
+  #logo{
+    width: 400px;
+    height: auto;
+  }
+
+  header{
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav_links{
+    flex-direction: row;
+  }
+
+  .card{
+    width: 300px;
+  }
+
+  .gallery img{
+    width: 300px;
+  }
+
+}
